@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard — Pactora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark">P</span>
+        <span>Pactora</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <a class="nav-link active" href="dashboard.html">
+          ◫&nbsp;&nbsp;Dashboard
+        </a>
+        <a class="nav-link" href="mode-selection.html">
+          ＋&nbsp;&nbsp;New Negotiation
+        </a>
+        <a class="nav-link" href="agent-configuration.html">
+          ♙&nbsp;&nbsp;My Agents
+        </a>
+        <a class="nav-link" href="negotiation-result.html">
+          ▤&nbsp;&nbsp;Negotiation History
+        </a>
+        <a class="nav-link" href="reports.html">
+          ⌁&nbsp;&nbsp;Reports
+        </a>
+        <a class="nav-link" href="#settings" data-action="settings">
+          ⚙&nbsp;&nbsp;Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="profile-mini">
+          <div class="avatar" id="userInitial">JD</div>
+          <div>
+            <strong id="userName">Jamie Doe</strong>
+            <span id="userEmail">jamie@pactora.ai</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button class="icon-button mobile-menu" id="menuBtn">
+            ☰
+          </button>
+          <h1>Overview</h1>
+        </div>
+
+        <div class="top-actions">
+          <button class="icon-button" title="Notifications">♢</button>
+          <a class="button primary" href="mode-selection.html">
+            ＋ New negotiation
+          </a>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="welcome-row">
+          <div>
+            <span class="eyebrow purple">Tuesday, November 19</span>
+            <h2 id="welcomeName">Good morning, Jamie</h2>
+            <p>Here is what is happening with your negotiations.</p>
+          </div>
+        </div>
+
+        <section class="cards-grid">
+          <article class="metric-card">
+            <div class="metric-top">
+              <span>Total negotiations</span>
+              <div class="metric-icon">◎</div>
+            </div>
+            <strong id="totalSessions">24</strong>
+            <small>↑ 12% this month</small>
+          </article>
+
+          <article class="metric-card">
+            <div class="metric-top">
+              <span>Successful agreements</span>
+              <div class="metric-icon green">✓</div>
+            </div>
+            <strong id="successfulSessions">20</strong>
+            <small>↑ 8% this month</small>
+          </article>
+
+          <article class="metric-card">
+            <div class="metric-top">
+              <span>Success rate</span>
+              <div class="metric-icon orange">%</div>
+            </div>
+            <strong id="successRate">83.3%</strong>
+            <small>↑ 4.2% this month</small>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="card">
+            <div class="card-header">
+              <h3>Recent activity</h3>
+              <a href="negotiation-result.html">View all</a>
+            </div>
+            <div id="recentActivity"></div>
+          </article>
+
+          <article class="card quick-card">
+            <span class="eyebrow">New simulation</span>
+            <h3>Ready to negotiate?</h3>
+            <p>
+              Choose a mode, configure your agents,
+              and test a new strategy.
+            </p>
+            <a class="button" href="mode-selection.html">
+              Start negotiation →
+            </a>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

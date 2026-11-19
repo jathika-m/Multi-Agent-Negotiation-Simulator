@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b46d6">
+  <title>Pactora — Multi-Agent Negotiation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+  <main class="login-shell">
+    <section class="login-brand">
+      <a class="brand brand-light" href="index.html">
+        <span class="brand-mark">P</span>
+        <span>Pactora</span>
+      </a>
+
+      <div class="brand-story">
+        <span class="eyebrow">Negotiation intelligence</span>
+        <h1>Where smart agents find common ground.</h1>
+        <p>
+          Run realistic negotiation simulations, test strategies,
+          and turn every conversation into insight.
+        </p>
+      </div>
+
+      <div class="brand-stat">
+        <strong>84%</strong>
+        <span>Average agreement success</span>
+      </div>
+    </section>
+
+    <section class="login-panel">
+      <a class="brand brand-mobile" href="index.html">
+        <span class="brand-mark">P</span>
+        <span>Pactora</span>
+      </a>
+
+      <div class="login-card">
+        <div class="form-heading">
+          <span class="eyebrow purple">Welcome back</span>
+          <h2 id="authTitle">Sign in to your account</h2>
+        </div>
+
+        <form id="authForm" novalidate>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@company.com"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <div class="field-label-row">
+              <label for="password">Password</label>
+              <button class="text-button" type="button" id="forgotBtn">
+                Forgot password?
+              </button>
+            </div>
+
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              minlength="6"
+              required
+            >
+          </div>
+
+          <p class="form-error" id="authError" role="alert"></p>
+
+          <button class="button primary wide" type="submit" id="authSubmit">
+            Sign in
+          </button>
+        </form>
+
+        <p class="switch-auth">
+          New to Pactora?
+          <button class="text-button strong" type="button" id="signupToggle">
+            Create an account
+          </button>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

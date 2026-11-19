@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Select Mode — Pactora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark">P</span>
+        <span>Pactora</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">◫&nbsp;&nbsp;Dashboard</a>
+        <a class="nav-link active" href="mode-selection.html">
+          ＋&nbsp;&nbsp;New Negotiation
+        </a>
+        <a class="nav-link" href="agent-configuration.html">
+          ♙&nbsp;&nbsp;My Agents
+        </a>
+        <a class="nav-link" href="negotiation-result.html">
+          ▤&nbsp;&nbsp;Negotiation History
+        </a>
+        <a class="nav-link" href="reports.html">
+          ⌁&nbsp;&nbsp;Reports
+        </a>
+        <a class="nav-link" href="#settings" data-action="settings">
+          ⚙&nbsp;&nbsp;Settings
+        </a>
+      </nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button class="icon-button mobile-menu" id="menuBtn">
+            ☰
+          </button>
+          <h1>New Negotiation</h1>
+        </div>
+
+        <div class="top-actions">
+          <a class="icon-button" href="dashboard.html" title="Close">
+            ×
+          </a>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="stepper">
+          <span class="step active">Mode</span>
+          <i class="step-line"></i>
+          <span class="step">Scenario</span>
+          <i class="step-line"></i>
+          <span class="step">Agents</span>
+          <i class="step-line"></i>
+          <span class="step">Negotiate</span>
+        </div>
+
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow purple">Step 1 of 4</span>
+            <h2>Choose a negotiation mode</h2>
+            <p>Select who will participate in this negotiation.</p>
+          </div>
+        </div>
+
+        <section class="selection-grid" id="modeGrid">
+          <label class="choice-card" data-value="ai-ai">
+            <input type="radio" name="mode" value="ai-ai">
+            <span class="choice-check"></span>
+
+            <div class="choice-icon">AI</div>
+            <h3>AI vs AI</h3>
+            <p>
+              Two AI agents negotiate automatically using
+              their configured personalities and strategies.
+            </p>
+          </label>
+
+          <label class="choice-card" data-value="human-ai">
+            <input type="radio" name="mode" value="human-ai">
+            <span class="choice-check"></span>
+
+            <div class="choice-icon">H/AI</div>
+            <h3>Human vs AI</h3>
+            <p>
+              Take control as a human negotiator and respond
+              directly against an adaptive AI agent.
+            </p>
+          </label>
+
+          <label class="choice-card" data-value="human-human">
+            <input type="radio" name="mode" value="human-human">
+            <span class="choice-check"></span>
+
+            <div class="choice-icon">H/H</div>
+            <h3>Human vs Human</h3>
+            <p>
+              Set up a collaborative negotiation room
+              for two human participants.
+            </p>
+          </label>
+        </section>
+
+        <div class="page-footer">
+          <a class="button secondary" href="dashboard.html">
+            Cancel
+          </a>
+
+          <button class="button primary" id="continueMode" disabled>
+            Continue →
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

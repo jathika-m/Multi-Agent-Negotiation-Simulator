@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Select Scenario — Pactora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark">P</span>
+        <span>Pactora</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">◫&nbsp;&nbsp;Dashboard</a>
+        <a class="nav-link active" href="mode-selection.html">
+          ＋&nbsp;&nbsp;New Negotiation
+        </a>
+        <a class="nav-link" href="agent-configuration.html">
+          ♙&nbsp;&nbsp;My Agents
+        </a>
+        <a class="nav-link" href="negotiation-result.html">
+          ▤&nbsp;&nbsp;Negotiation History
+        </a>
+        <a class="nav-link" href="reports.html">
+          ⌁&nbsp;&nbsp;Reports
+        </a>
+        <a class="nav-link" href="#settings" data-action="settings">
+          ⚙&nbsp;&nbsp;Settings
+        </a>
+      </nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button class="icon-button mobile-menu" id="menuBtn">
+            ☰
+          </button>
+          <h1>New Negotiation</h1>
+        </div>
+
+        <div class="top-actions">
+          <a class="icon-button" href="dashboard.html" title="Close">
+            ×
+          </a>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="stepper">
+          <span class="step">Mode</span>
+          <i class="step-line"></i>
+          <span class="step active">Scenario</span>
+          <i class="step-line"></i>
+          <span class="step">Agents</span>
+          <i class="step-line"></i>
+          <span class="step">Negotiate</span>
+        </div>
+
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow purple">Step 2 of 4</span>
+            <h2>Select a scenario</h2>
+            <p>Choose the context for your negotiation.</p>
+          </div>
+        </div>
+
+        <section class="selection-grid" id="scenarioGrid">
+          <label class="choice-card" data-value="vendor">
+            <input type="radio" name="scenario" value="vendor">
+            <span class="choice-check"></span>
+
+            <div class="choice-icon">◈</div>
+            <h3>Vendor Pricing Negotiation</h3>
+            <p>
+              Agree on an annual software contract with service
+              terms, volume discounts and payment structure.
+            </p>
+          </label>
+
+          <label class="choice-card" data-value="job">
+            <input type="radio" name="scenario" value="job">
+            <span class="choice-check"></span>
+
+            <div class="choice-icon">◆</div>
+            <h3>Job Offer Negotiation</h3>
+            <p>
+              Balance base salary, equity, benefits and start date
+              for a senior product role.
+            </p>
+          </label>
+
+          <label class="choice-card" data-value="budget">
+            <input type="radio" name="scenario" value="budget">
+            <span class="choice-check"></span>
+
+            <div class="choice-icon">▣</div>
+            <h3>Project Budget Allocation</h3>
+            <p>
+              Allocate a fixed budget across scope, timeline,
+              staffing and contingency priorities.
+            </p>
+          </label>
+        </section>
+
+        <div class="page-footer">
+          <a class="button secondary" href="mode-selection.html">
+            ← Back
+          </a>
+
+          <button class="button primary" id="continueScenario" disabled>
+            Continue →
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

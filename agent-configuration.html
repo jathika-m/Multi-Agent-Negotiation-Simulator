@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configure Agents — Pactora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark">P</span>
+        <span>Pactora</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">
+          ◫&nbsp;&nbsp;Dashboard
+        </a>
+
+        <a class="nav-link active" href="mode-selection.html">
+          ＋&nbsp;&nbsp;New Negotiation
+        </a>
+
+        <a class="nav-link" href="agent-configuration.html">
+          ♙&nbsp;&nbsp;My Agents
+        </a>
+
+        <a class="nav-link" href="negotiation-result.html">
+          ▤&nbsp;&nbsp;Negotiation History
+        </a>
+
+        <a class="nav-link" href="reports.html">
+          ⌁&nbsp;&nbsp;Reports
+        </a>
+
+        <a class="nav-link" href="#settings" data-action="settings">
+          ⚙&nbsp;&nbsp;Settings
+        </a>
+      </nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button class="icon-button mobile-menu" id="menuBtn">
+            ☰
+          </button>
+
+          <h1>Configure Agents</h1>
+        </div>
+
+        <div class="top-actions">
+          <a class="icon-button" href="dashboard.html" title="Close">
+            ×
+          </a>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="stepper">
+          <span class="step">Mode</span>
+          <i class="step-line"></i>
+          <span class="step">Scenario</span>
+          <i class="step-line"></i>
+          <span class="step active">Agents</span>
+          <i class="step-line"></i>
+          <span class="step">Negotiate</span>
+        </div>
+
+        <form id="agentForm">
+          <div class="config-grid">
+            <article class="card">
+              <div class="agent-card-head">
+                <div class="avatar">A</div>
+
+                <div>
+                  <h3 id="agentAHeading">Agent A</h3>
+                  <span id="agentARole">
+                    Purchasing representative
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="agentAName">Agent name</label>
+                  <input
+                    id="agentAName"
+                    name="agentAName"
+                    value="Mira"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label for="agentARoleInput">Role</label>
+                  <input
+                    id="agentARoleInput"
+                    name="agentARole"
+                    value="Buyer"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label for="agentAPersonality">Personality</label>
+                  <select
+                    id="agentAPersonality"
+                    name="agentAPersonality"
+                  >
+                    <option>Rational</option>
+                    <option>Collaborative</option>
+                    <option>Competitive</option>
+                    <option>Conservative</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="agentAStrategy">
+                    Negotiation strategy
+                  </label>
+                  <select
+                    id="agentAStrategy"
+                    name="agentAStrategy"
+                  >
+                    <option>Principled</option>
+                    <option>Anchoring</option>
+                    <option>Concession</option>
+                    <option>Competitive</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="agentAGoal">Negotiation goal</label>
+                  <input
+                    id="agentAGoal"
+                    name="agentAGoal"
+                    value="Secure a favorable price"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label id="initialALabel" for="agentAInitial">
+                    Initial offer
+                  </label>
+                  <input
+                    id="agentAInitial"
+                    name="agentAInitial"
+                    type="number"
+                    value="90000"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label id="minimumALabel" for="agentAMinimum">
+                    Minimum acceptable
+                  </label>
+                  <input
+                    id="agentAMinimum"
+                    name="agentAMinimum"
+                    type="number"
+                    value="105000"
+                    required
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="agent-card-head">
+                <div class="avatar">B</div>
+
+                <div>
+                  <h3 id="agentBHeading">Agent B</h3>
+                  <span id="agentBRole">
+                    Vendor representative
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="agentBName">Agent name</label>
+                  <input
+                    id="agentBName"
+                    name="agentBName"
+                    value="Atlas"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label for="agentBRoleInput">Role</label>
+                  <input
+                    id="agentBRoleInput"
+                    name="agentBRole"
+                    value="Seller"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label for="agentBPersonality">Personality</label>
+                  <select
+                    id="agentBPersonality"
+                    name="agentBPersonality"
+                  >
+                    <option>Collaborative</option>
+                    <option>Rational</option>
+                    <option>Competitive</option>
+                    <option>Conservative</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="agentBStrategy">
+                    Negotiation strategy
+                  </label>
+                  <select
+                    id="agentBStrategy"
+                    name="agentBStrategy"
+                  >
+                    <option>Collaborative</option>
+                    <option>Anchoring</option>
+                    <option>Concession</option>
+                    <option>Competitive</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="agentBGoal">Negotiation goal</label>
+                  <input
+                    id="agentBGoal"
+                    name="agentBGoal"
+                    value="Protect contract value"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label id="initialBLabel" for="agentBInitial">
+                    Initial offer
+                  </label>
+                  <input
+                    id="agentBInitial"
+                    name="agentBInitial"
+                    type="number"
+                    value="125000"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label id="minimumBLabel" for="agentBMinimum">
+                    Minimum acceptable
+                  </label>
+                  <input
+                    id="agentBMinimum"
+                    name="agentBMinimum"
+                    type="number"
+                    value="108000"
+                    required
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="form-error" id="configError"></p>
+
+          <div class="page-footer">
+            <a class="button secondary" href="scenario-selection.html">
+              ← Back
+            </a>
+
+            <button class="button primary" type="submit">
+              Start negotiation →
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

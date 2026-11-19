@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reports — Pactora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark">P</span>
+        <span>Pactora</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">
+          ◫&nbsp;&nbsp;Dashboard
+        </a>
+
+        <a class="nav-link" href="mode-selection.html">
+          ＋&nbsp;&nbsp;New Negotiation
+        </a>
+
+        <a class="nav-link" href="agent-configuration.html">
+          ♙&nbsp;&nbsp;My Agents
+        </a>
+
+        <a class="nav-link" href="negotiation-result.html">
+          ▤&nbsp;&nbsp;Negotiation History
+        </a>
+
+        <a class="nav-link active" href="reports.html">
+          ⌁&nbsp;&nbsp;Reports
+        </a>
+
+        <a class="nav-link" href="#settings" data-action="settings">
+          ⚙&nbsp;&nbsp;Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="profile-mini">
+          <div class="avatar">JD</div>
+          <div>
+            <strong>Jamie Doe</strong>
+            <span>jamie@pactora.ai</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button class="icon-button mobile-menu" id="menuBtn">
+            ☰
+          </button>
+
+          <h1>Reports &amp; Analytics</h1>
+        </div>
+
+        <div class="top-actions">
+          <button class="button secondary" id="downloadReport">
+            ⇩ Download Report PDF
+          </button>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow purple">Performance overview</span>
+            <h2>Negotiation intelligence</h2>
+            <p>Results across all simulated sessions.</p>
+          </div>
+        </div>
+
+        <section class="report-grid" id="reportMetrics"></section>
+
+        <section class="chart-grid">
+          <article class="card">
+            <div class="card-header">
+              <h3>Price movement across rounds</h3>
+              <span class="status success">Live</span>
+            </div>
+
+            <div class="chart-box">
+              <canvas id="movementChart"></canvas>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h3>Agreement outcomes</h3>
+            </div>
+
+            <div class="chart-box">
+              <canvas id="outcomeChart"></canvas>
+            </div>
+          </article>
+        </section>
+
+        <section class="report-list">
+          <article class="insight">
+            <span>Best counteroffer</span>
+            <strong id="bestCounter">$112,500</strong>
+          </article>
+
+          <article class="insight">
+            <span>Agent performance lead</span>
+            <strong id="performanceLead">
+              Mira · 92%
+            </strong>
+          </article>
+
+          <article class="insight">
+            <span>Negotiation efficiency</span>
+            <strong id="efficiencyMetric">
+              94 / 100
+            </strong>
+          </article>
+        </section>
+
+        <article class="card" style="margin-top:16px">
+          <div class="card-header">
+            <h3>Negotiation timeline</h3>
+          </div>
+
+          <div id="timeline"></div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

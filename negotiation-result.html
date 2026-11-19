@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Negotiation Result — Pactora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark">P</span>
+        <span>Pactora</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">
+          ◫&nbsp;&nbsp;Dashboard
+        </a>
+
+        <a class="nav-link" href="mode-selection.html">
+          ＋&nbsp;&nbsp;New Negotiation
+        </a>
+
+        <a class="nav-link" href="agent-configuration.html">
+          ♙&nbsp;&nbsp;My Agents
+        </a>
+
+        <a class="nav-link active" href="negotiation-result.html">
+          ▤&nbsp;&nbsp;Negotiation History
+        </a>
+
+        <a class="nav-link" href="reports.html">
+          ⌁&nbsp;&nbsp;Reports
+        </a>
+      </nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button class="icon-button mobile-menu" id="menuBtn">
+            ☰
+          </button>
+
+          <h1>Negotiation Result</h1>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="result-hero" id="resultHero">
+          <div class="result-icon" id="resultIcon">✓</div>
+
+          <span class="eyebrow purple" id="resultKicker">
+            Negotiation complete
+          </span>
+
+          <h2 id="resultTitle">Agreement reached</h2>
+
+          <p id="resultSubtitle">
+            Both parties reached a mutually acceptable position.
+          </p>
+
+          <div class="result-amount" id="finalAmount">
+            $112,500
+          </div>
+
+          <span style="color:var(--muted);font-size:12px">
+            Final negotiated amount
+          </span>
+
+          <div class="result-meta">
+            <div>
+              <strong id="initialAmount">$90,000</strong>
+              <span>Initial offer</span>
+            </div>
+
+            <div>
+              <strong id="roundCount">4 rounds</strong>
+              <span>Negotiation rounds</span>
+            </div>
+
+            <div>
+              <strong id="duration">02:18</strong>
+              <span>Duration</span>
+            </div>
+          </div>
+
+          <div class="result-actions">
+            <a class="button secondary" href="dashboard.html">
+              Return to dashboard
+            </a>
+
+            <a class="button primary" href="reports.html">
+              View detailed report →
+            </a>
+          </div>
+        </section>
+
+        <div class="cards-grid" style="margin-top:16px">
+          <article class="metric-card">
+            <span>Agent A performance</span>
+            <strong id="agentAPerformance">92%</strong>
+            <small>Goal achievement</small>
+          </article>
+
+          <article class="metric-card">
+            <span>Agent B performance</span>
+            <strong id="agentBPerformance">88%</strong>
+            <small>Goal achievement</small>
+          </article>
+
+          <article class="metric-card">
+            <span>Efficiency score</span>
+            <strong id="efficiencyScore">94</strong>
+            <small>Excellent outcome</small>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

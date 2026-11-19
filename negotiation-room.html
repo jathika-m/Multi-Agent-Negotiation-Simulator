@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Negotiation Room — Pactora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="dashboard.html">
+        <span class="brand-mark">P</span>
+        <span>Pactora</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">
+          ◫&nbsp;&nbsp;Dashboard
+        </a>
+
+        <a class="nav-link active" href="mode-selection.html">
+          ＋&nbsp;&nbsp;New Negotiation
+        </a>
+
+        <a class="nav-link" href="agent-configuration.html">
+          ♙&nbsp;&nbsp;My Agents
+        </a>
+
+        <a class="nav-link" href="negotiation-result.html">
+          ▤&nbsp;&nbsp;Negotiation History
+        </a>
+
+        <a class="nav-link" href="reports.html">
+          ⌁&nbsp;&nbsp;Reports
+        </a>
+      </nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button class="icon-button mobile-menu" id="menuBtn">
+            ☰
+          </button>
+
+          <h1 id="roomTitle">Negotiation Room</h1>
+        </div>
+
+        <div class="top-actions">
+          <a class="icon-button" href="dashboard.html" title="Close">
+            ×
+          </a>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="negotiation-layout">
+          <aside class="card profile-panel">
+            <div class="agent-profile" id="profileA">
+              <div class="avatar">A</div>
+              <h3>Agent A</h3>
+              <p>Buyer</p>
+
+              <div class="mini-stat">
+                <span>Personality</span>
+                <strong>Rational</strong>
+              </div>
+
+              <div class="mini-stat">
+                <span>Status</span>
+                <strong style="color:var(--green)">Active</strong>
+              </div>
+            </div>
+
+            <div class="agent-profile" id="profileB">
+              <div class="avatar">B</div>
+              <h3>Agent B</h3>
+              <p>Seller</p>
+
+              <div class="mini-stat">
+                <span>Personality</span>
+                <strong>Collaborative</strong>
+              </div>
+
+              <div class="mini-stat">
+                <span>Status</span>
+                <strong style="color:var(--green)">Active</strong>
+              </div>
+            </div>
+          </aside>
+
+          <section class="card chat-panel">
+            <header class="chat-header">
+              <div>
+                <strong id="scenarioTitle">
+                  Vendor Pricing Negotiation
+                </strong>
+                <br>
+                <span id="modeTitle">
+                  AI vs AI · Live simulation
+                </span>
+              </div>
+
+              <span class="status success">Demo</span>
+            </header>
+
+            <div class="chat-messages" id="chatMessages"></div>
+
+            <div class="chat-compose" id="chatCompose">
+              <div class="compose-row">
+                <input
+                  id="humanMessage"
+                  placeholder="Write a message or offer..."
+                  autocomplete="off"
+                >
+
+                <button class="button primary" id="sendHuman">
+                  Send
+                </button>
+              </div>
+
+              <div class="compose-actions">
+                <button class="button secondary" id="acceptOffer">
+                  ✓ Accept offer
+                </button>
+
+                <button class="button danger" id="rejectOffer">
+                  × Reject
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <aside class="card round-panel">
+            <div class="round-big">
+              <strong id="roundNumber">Round 1</strong>
+              <span>of 6 maximum</span>
+            </div>
+
+            <div class="timer" id="timer">05:00</div>
+
+            <strong style="font-size:12px">
+              Offer history
+            </strong>
+
+            <div class="history-list" id="offerHistory"></div>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
